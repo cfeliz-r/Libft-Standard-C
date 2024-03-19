@@ -17,10 +17,6 @@ Make sure you add `#include "libft.h"` in all of your .c files.
 ### Makefile 
 Makefile is where you will create a file to compile your projects. Remember how in the piscine, you created an **int main** and **gcc** to compile the projects, well with a Makefile, you don't have to do that anymore, you just type `make` once you have created your Makefile. 
 
-# Great Resource for Libft
-
-https://www.asidesigned.com/project-libft.html 
-
 # Libft Functions
 
 ### Functions from `<ctype.h>`
