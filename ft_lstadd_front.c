@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cfeliz-r <cfeliz-r@student.your42network.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 20:07:06 by ncolomer          #+#    #+#             */
-/*   Updated: 2019/10/18 22:55:42 by ncolomer         ###   ########.fr       */
+/*   Created: 2024/03/20 21:53:19 by cfeliz-r          #+#    #+#             */
+/*   Updated: 2024/03/20 21:53:26 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
