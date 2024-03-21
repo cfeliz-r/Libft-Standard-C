@@ -6,13 +6,13 @@
 #    By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 11:33:17 by cfeliz-r          #+#    #+#              #
-#    Updated: 2024/03/18 12:12:46 by cfeliz-r         ###   ########.fr        #
+#    Updated: 2024/03/21 01:23:01 by cfeliz-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Library		= libft
+#Library		= libft
 
-files 	   = ft_strlen \
+#files 	   = ft_strlen \
 			 ft_memmove \
 			 ft_memcpy \
 			 ft_strlcpy \
@@ -47,31 +47,92 @@ files 	   = ft_strlen \
 			 ft_putendl_fd \
 			 ft_putnbr_fd \
 
-Compiler	= gcc
+#Compiler	= gcc
 
-CmpFlags	= -Wall -Wextra -Werror
+#CmpFlags	= -Wall -Wextra -Werror
 
-OUTN	= $(Library).a
+#OUTN	= $(Library).a
 
-CFILES	= $(files:%=%.c)
+#CFILES	= $(files:%=%.c)
 
-OFILES	= $(files:%=%.o)
+#OFILES	= $(files:%=%.o)
 
-NAME	= $(OUTN)
+#NAME	= $(OUTN)
 
-$(NAME):
-	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
-	ar -rc $(OUTN) $(OFILES)
+#$(NAME):
+#	$(Compiler) $(CmpFlags) -c $(CFILES) -I./
+#	ar -rc $(OUTN) $(OFILES)
 
-all: $(NAME)
+#all: $(NAME)
+
+# Variables
+
+SRCS		= ft_atoi.c \
+		  ft_bzero.c \
+		  ft_calloc.c \
+		  ft_isalnum.c \
+		  ft_isalpha.c \
+		  ft_isascii.c \
+		  ft_isdigit.c \
+		  ft_isprint.c \
+		  ft_itoa.c \
+		  ft_memchr.c \
+		  ft_memcmp.c \
+		  ft_memcpy.c \
+		  ft_memmove.c \
+		  ft_memset.c \
+		  ft_putchar_fd.c \
+		  ft_putendl_fd.c \
+		  ft_putnbr_fd.c \
+		  ft_putstr_fd.c \
+		  ft_split.c \
+		  ft_strchr.c \
+		  ft_strdup.c \
+		  ft_striteri.c \
+		  ft_strjoin.c \
+		  ft_strlcat.c \
+		  ft_strlcpy.c \
+		  ft_strlen.c \
+		  ft_strmapi.c \
+		  ft_strncmp.c \
+		  ft_strnstr.c \
+		  ft_strrchr.c \
+		  ft_strtrim.c \
+		  ft_substr.c \
+		  ft_tolower.c \
+		  ft_toupper.c
+SRCS_BONUS	= ft_lstadd_back.c \
+		  ft_lstadd_front.c \
+		  ft_lstclear.c \
+		  ft_lstdelone.c \
+		  ft_lstiter.c \
+		  ft_lstlast.c \
+		  ft_lstmap.c \
+		  ft_lstnew.c \
+		  ft_lstsize.c
+OBJS		= ${SRCS:.c=.o}
+OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
+NAME		= libft.a
+CC		= gcc
+CFLAGS		= -Wall -Wextra -Werror
+
+%.o: %.c libft.h
+		${CC} ${CFLAGS} -I. -c $< -o $@
+
+all:		${NAME}
+
+$(NAME):	${OBJS} libft.h
+		ar rcs ${NAME} ${OBJS}
+
+bonus:		${OBJS_BONUS} libft.h
+		ar rcs ${NAME} ${OBJS_BONUS}
 
 clean:
-	rm -f $(NAME)
-	rm -f $(OFILES)
+		rm -f ${OBJS} ${OBJS_BONUS}
 
-fclean: clean
-	rm -f $(NAME)
+fclean:		clean
+		rm -f ${NAME} libft.so
 
-re: fclean all
+re:		fclean all
 
-.PHONY: all, clean, fclean, re
+.PHONY:	all clean fclean re bonus
