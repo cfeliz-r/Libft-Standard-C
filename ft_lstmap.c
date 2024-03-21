@@ -6,11 +6,10 @@
 /*   By: cfeliz-r <cfeliz-r@student.your42network.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:55:20 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/21 01:05:43 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/03/21 01:37:56 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "libft.h"
 
 static t_list	*lst_new(void *content)

@@ -6,7 +6,7 @@
 /*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 14:49:01 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/19 10:18:32 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/03/21 01:43:27 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int main()
-{
-    char str1[] = "Hello,World!";
-    char str2[7];
-
-    ft_memmove(str2, str1, 6);
-
-    printf("str2: %s\n", str2);
-
-    return 0;
-}
-*/
