@@ -6,11 +6,9 @@
 #    By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/18 11:33:17 by cfeliz-r          #+#    #+#              #
-#    Updated: 2024/03/21 01:28:07 by cfeliz-r         ###   ########.fr        #
+#    Updated: 2024/03/23 13:07:06 by cfeliz-r         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# Variables
 
 SRCS		= ft_atoi.c \
 		  ft_bzero.c \

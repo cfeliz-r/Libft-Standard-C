@@ -6,10 +6,9 @@
 /*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 10:14:13 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/21 01:43:04 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/03/23 11:20:48 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -31,4 +30,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (mem);
 }
-

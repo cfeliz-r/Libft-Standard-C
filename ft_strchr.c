@@ -6,11 +6,12 @@
 /*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 10:22:01 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/21 01:36:06 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/03/23 12:07:09 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	char	a;
