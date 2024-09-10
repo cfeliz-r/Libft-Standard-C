@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_words.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/19 10:13:42 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/23 11:20:21 by cfeliz-r         ###   ########.fr       */
+/*   Created: 2024/03/27 13:27:26 by cfeliz-r          #+#    #+#             */
+/*   Updated: 2024/06/24 13:05:03 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putcharacter_length(char character, int *length)
 {
-	ft_memset(s, 0, n);
+	write(1, &character, 1);
+	(*length)++;
+}
+
+void	ft_string(char *args, int *length)
+{
+	size_t	i;
+
+	i = 0;
+	if (!args)
+	{
+		write(1, "(null)", 6);
+		(*length) += 6;
+		return ;
+	}
+	while (args[i] != '\0')
+	{
+		ft_putcharacter_length(args[i], length);
+		i++;
+	}
 }

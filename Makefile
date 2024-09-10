@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: manufern <manufern@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/18 11:33:17 by cfeliz-r          #+#    #+#              #
-#    Updated: 2024/03/23 13:07:06 by cfeliz-r         ###   ########.fr        #
+#    Created: 2024/06/04 14:53:34 by cfeliz-r          #+#    #+#              #
+#    Updated: 2024/08/05 14:22:28 by manufern         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,17 @@ SRCS		= ft_atoi.c \
 		  ft_strtrim.c \
 		  ft_substr.c \
 		  ft_tolower.c \
-		  ft_toupper.c
-SRCS_BONUS	= ft_lstadd_back.c \
+		  ft_toupper.c \
+		  ft_strcmp.c \
+		  ft_printf.c \
+		  ft_number.c \
+		  ft_putstr.c \
+		  ft_words.c \
+		  get_next_line/get_next_line.c \
+		  get_next_line/get_next_line_utils.c \
+		  get_next_line/get_next_line_bonus.c \
+		  get_next_line/get_next_line_utils_bonus.c \
+		  ft_lstadd_back.c \
 		  ft_lstadd_front.c \
 		  ft_lstclear.c \
 		  ft_lstdelone.c \
@@ -52,30 +61,29 @@ SRCS_BONUS	= ft_lstadd_back.c \
 		  ft_lstlast.c \
 		  ft_lstmap.c \
 		  ft_lstnew.c \
-		  ft_lstsize.c
+		  ft_lstsize.c \
+		  ft_realloc.c \
+		  ft_strstr.c
+
 OBJS		= ${SRCS:.c=.o}
-OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 NAME		= libft.a
 CC		= gcc
 CFLAGS		= -Wall -Wextra -Werror
 
 %.o: %.c libft.h
-		${CC} ${CFLAGS} -I. -c $< -o $@
+		@${CC} ${CFLAGS} -I. -c $< -o $@
 
 all:		${NAME}
 
 $(NAME):	${OBJS} libft.h
-		ar rcs ${NAME} ${OBJS}
-
-bonus:		${OBJS_BONUS} libft.h
-		ar rcs ${NAME} ${OBJS_BONUS}
+		@ar rcs ${NAME} ${OBJS}
 
 clean:
-		rm -f ${OBJS} ${OBJS_BONUS}
+		@rm -f ${OBJS}
 
 fclean:		clean
-		rm -f ${NAME}
+		@rm -f ${NAME}
 
 re:		fclean all
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re

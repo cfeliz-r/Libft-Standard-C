@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 21:56:57 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/07/24 17:36:55 by manufern         ###   ########.fr       */
+/*   Created: 2024/08/05 14:21:16 by manufern          #+#    #+#             */
+/*   Updated: 2024/08/05 14:27:23 by manufern         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list_env *lst)
+void	*simple_realloc(void *ptr, size_t old_size, size_t new_size)
 {
-	size_t	i;
+	void		*new_ptr;
+	size_t		copy_size;
 
-	i = 0;
-	while (lst)
+	if (new_size == 0)
 	{
-		lst = lst->next;
-		i++;
+		free(ptr);
+		return (NULL);
 	}
-	return (i);
+	if (ptr == NULL)
+		return (malloc(new_size));
+	new_ptr = malloc(new_size);
+	if (new_ptr == NULL)
+		return (NULL);
+	if (old_size < new_size)
+		copy_size = old_size;
+	else
+		copy_size = new_size;
+	ft_memcpy(new_ptr, ptr, copy_size);
+	free(ptr);
+	return (new_ptr);
 }

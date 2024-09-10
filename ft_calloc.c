@@ -6,17 +6,17 @@
 /*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 10:14:13 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/03/23 11:20:48 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/06/24 14:23:00 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(int count, int size)
 {
-	size_t	total;
+	int		total;
 	char	*mem;
-	size_t	i;
+	int		i;
 
 	total = count * size;
 	mem = malloc(total);
