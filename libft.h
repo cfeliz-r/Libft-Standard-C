@@ -24,6 +24,12 @@
 #  define BUFFER_SIZE 42
 # endif
 
+typedef struct s_list_env
+{
+	void				*content;
+	struct s_list_env	*next;
+}				t_list_env;
+
 char		*ft_strstr(char *str, char *to_find);
 char		*ft_strndup(const char *s, size_t n);
 char		*ft_strtok(char *str, const char *delim);

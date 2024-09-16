@@ -19,7 +19,7 @@ t_list_env	*ft_lstnew(void *content)
 	elt = (t_list_env *)malloc(sizeof(*elt));
 	if (elt == NULL)
 		return (NULL);
-	elt->envp_content = content;
+	elt->content = content;
 	elt->next = NULL;
 	return (elt);
 }

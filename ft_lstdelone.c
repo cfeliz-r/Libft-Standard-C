@@ -19,7 +19,7 @@ void
 		return ;
 	if (lst)
 	{
-		(*del)(lst->envp_content);
+		(*del)(lst->content);
 		free(lst);
 	}
 }

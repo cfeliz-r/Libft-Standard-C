@@ -19,7 +19,7 @@ void
 		return ;
 	while (lst)
 	{
-		(*f)(lst->envp_content);
+		(*f)(lst->content);
 		lst = lst->next;
 	}
 }

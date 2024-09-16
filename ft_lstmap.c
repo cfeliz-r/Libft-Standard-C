@@ -19,7 +19,7 @@ static t_list_env	*lst_new(void *content)
 	new = (t_list_env *)malloc(sizeof(t_list_env));
 	if (!new)
 		return (NULL);
-	new->envp_content = content;
+	new->content = content;
 	new->next = NULL;
 	return (new);
 }
@@ -29,7 +29,7 @@ static void	lst_clear(t_list_env **lst, void (*del)(void *))
 	if (!lst || !del || !(*lst))
 		return ;
 	lst_clear(&(*lst)->next, del);
-	(del)((*lst)->envp_content);
+	(del)((*lst)->content);
 	free(*lst);
 	*lst = NULL;
 }
@@ -62,7 +62,7 @@ t_list_env	*ft_lstmap(t_list_env *lst, void *(*f)(void *), void (*del)(void *))
 	new_list = NULL;
 	while (lst)
 	{
-		set = f(lst->envp_content);
+		set = f(lst->content);
 		new_node = lst_new(set);
 		if (!new_node)
 		{
