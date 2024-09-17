@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cfeliz-r <cfeliz-r@student.your42network.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:54:28 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/07/24 17:36:55 by manufern         ###   ########.fr       */
+/*   Updated: 2024/03/20 21:54:30 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void
-	ft_lstiter(t_list_env *lst, void (*f)(void*))
+	ft_lstiter(t_list *lst, void (*f)(void*))
 {
 	if (!f)
 		return ;

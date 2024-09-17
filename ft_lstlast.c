@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manufern <manufern@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cfeliz-r <cfeliz-r@student.your42network.  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:54:56 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/07/24 18:30:53 by manufern         ###   ########.fr       */
+/*   Updated: 2024/03/23 13:03:27 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list_env	*ft_lstlast(t_list_env *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst)
 	{
-		if (lst->next != NULL)
+		if (!lst->next)
 			return (lst);
 		lst = lst->next;
 	}

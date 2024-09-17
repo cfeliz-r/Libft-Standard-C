@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cfeliz-r <cfeliz-r@student.42.fr>          +#+  +:+       +#+        */
+/*   By: cfeliz-r <cfeliz-r@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:03:56 by cfeliz-r          #+#    #+#             */
-/*   Updated: 2024/09/06 17:51:01 by cfeliz-r         ###   ########.fr       */
+/*   Updated: 2024/03/23 12:09:35 by cfeliz-r         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,5 @@ char	*ft_strdup(const char *s)
 		str[i] = s[i];
 		i--;
 	}
-	s = 0;
 	return (str);
 }
